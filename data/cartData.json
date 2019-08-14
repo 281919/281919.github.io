@@ -1,0 +1,104 @@
+{
+  "status":1,
+  "result":{
+    "totalMoney":59,
+    "list":[
+      {
+        "productId":"600100002115",
+        "productName":"JavaScript高级程序设计（第三版）",
+        "productPrice":99,
+        "productQuantity":1,
+        "productImage":"static/img/goods-3.jpg",
+        "parts":[
+          {
+            "partsId":"10001",
+            "partsName":"作者：Nicholas C.Zakas"
+          },
+          {
+            "partsId":"10002",
+            "partsName":"翻译：李松锋 曹力"
+          }
+        ]
+
+      },
+      {
+        "productId":"600100002319",
+        "productName":"HTML&CSS设计与构建网站",
+        "productPrice":79.8,
+        "productQuantity":1,
+        "productImage":"static/img/goods-5.jpg",
+        "parts":[
+          {
+            "partsId":"20001",
+            "partsName":"作者：[美] Jon Duckett"
+          },
+          {
+            "partsId":"20002",
+            "partsName":"翻译：刘涛 陈学敏"
+          }
+        ]
+
+      },
+      {
+        "productId":"600100002420",
+        "productName":"Vue.js实战",
+        "productPrice":79,
+        "productQuantity":1,
+        "productImage":"static/img/goods-6.jpg",
+        "parts":[
+          {
+            "partsId":"30001",
+            "partsName":"作者：梁灏"
+          }
+
+        ]
+
+      },
+      {
+        "productId":"600100003582",
+        "productName":"Vue.js项目开发实战",
+        "productPrice":89,
+        "productQuantity":1,
+        "productImage":"static/img/goods-7.jpg",
+        "parts":[
+          {
+            "partsId":"30001",
+            "partsName":"作者：张帆"
+          }
+
+        ]
+
+      },
+
+      {
+        "productId":"600100002120",
+        "productName":"JavaScript权威指南",
+        "productPrice":137,
+        "productQuantity":1,
+        "productImage":"static/img/goods-4.jpg",
+        "parts":[
+          {
+            "partsId":"40001",
+            "partName":"作者：David Flanagan"
+            
+          },
+          {
+            "partsId":"40002",
+            "partName":"译者：李强"
+            
+          }
+
+        ]
+        
+        
+        
+        
+ 
+
+      }
+      
+  ]
+},
+
+  "message":""
+}
