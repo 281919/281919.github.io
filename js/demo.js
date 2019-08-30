@@ -22,6 +22,9 @@ $(document).ready(function() {
       
       
     })
+    .on('click' , function(e) {
+      sub.removeClass("none");
+    })
     .on('mouseleave', function(e) {
       sub.addClass('none')
 
@@ -45,6 +48,12 @@ $(document).ready(function() {
         activeMenu.removeClass('none');
         return;
       }
+      activeRow.removeClass('active')
+      activeMenu.addClass('none');
+
+      activeRow = $(e.target).addClass('active');
+      activeMenu = $("#" + activeRow.data('id'));
+      activeMenu.removeClass('none');
     })
     .on('mouseenter' , 'li' , function(e) {
       if (!activeRow) {
