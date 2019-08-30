@@ -3,7 +3,10 @@ $(document).ready(function() {
   
   var activeRow;
   var activeMenu;
+  var activeRowClick;
+  var activeMenuClick;
   var timer;
+  var flage = false;
 
   var mouseInSub = false;
 
@@ -42,18 +45,18 @@ $(document).ready(function() {
 
     })
     .on('click' , 'li' , function(e){
-      if (!activeRow) {
-        activeRow = $(e.target).addClass('active');
-        activeMenu = $("#" + activeRow.data('id'));
-        activeMenu.removeClass('none');
+      if (!activeRowClick) {
+        activeRowClick = $(e.target).addClass('active');
+        activeMenuClick = $("#" + activeRowClick.data('id'));
+        activeMenuClick.removeClass('none');
         return;
       }
-      activeRow.removeClass('active')
-      activeMenu.addClass('none');
+      activeRowClick.removeClass('active')
+      activeMenuClick.addClass('none');
 
-      activeRow = $(e.target).addClass('active');
-      activeMenu = $("#" + activeRow.data('id'));
-      activeMenu.removeClass('none');
+      activeRowClick = $(e.target).addClass('active');
+      activeMenuClick = $("#" + activeRowClick.data('id'));
+      activeMenuClick.removeClass('none');
     })
     .on('mouseenter' , 'li' , function(e) {
       if (!activeRow) {
