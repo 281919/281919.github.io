@@ -12,6 +12,8 @@ $(document).ready(function() {
   }).on('mouseleave' , function(e) {
     mouseInSub = false;
   })
+
+
  
 
   $('#test')
@@ -35,6 +37,14 @@ $(document).ready(function() {
   
 
 
+    })
+    .on('click' , 'li' , function(e){
+      if (!activeRow) {
+        activeRow = $(e.target).addClass('active');
+        activeMenu = $("#" + activeRow.data('id'));
+        activeMenu.removeClass('none');
+        return;
+      }
     })
     .on('mouseenter' , 'li' , function(e) {
       if (!activeRow) {
