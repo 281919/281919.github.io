@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 
     })
-    .on('click' , 'li' , function(e){
+    .on('mousemove' , 'li' , function(e){
       if (!activeRowClick) {
         activeRowClick = $(e.target).addClass('active');
         activeMenuClick = $("#" + activeRowClick.data('id'));
