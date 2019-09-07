@@ -3,8 +3,7 @@ $(document).ready(function() {
   
   var activeRow;
   var activeMenu;
-  var activeRowClick;
-  var activeMenuClick;
+
   var timer;
   var flage = false;
 
@@ -25,9 +24,7 @@ $(document).ready(function() {
       
       
     })
-    .on('click' , function(e) {
-      sub.removeClass("none");
-    })
+
     .on('mouseleave', function(e) {
       sub.addClass('none')
 
@@ -40,24 +37,8 @@ $(document).ready(function() {
         activeMenu.addClass("none");
         activeMenu = null;
       }
-  
-
-
     })
-    .on('mousemove' , 'li' , function(e){
-      if (!activeRowClick) {
-        activeRowClick = $(e.target).addClass('active');
-        activeMenuClick = $("#" + activeRowClick.data('id'));
-        activeMenuClick.removeClass('none');
-        return;
-      }
-      activeRowClick.removeClass('active')
-      activeMenuClick.addClass('none');
 
-      activeRowClick = $(e.target).addClass('active');
-      activeMenuClick = $("#" + activeRowClick.data('id'));
-      activeMenuClick.removeClass('none');
-    })
     .on('mouseenter' , 'li' , function(e) {
       if (!activeRow) {
         activeRow = $(e.target).addClass('active');
