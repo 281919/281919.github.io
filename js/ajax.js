@@ -6,7 +6,7 @@ window.onload = function() {
 
   if(xhr.status >= 200 && xhr.status < 300 || xhr.status == 304){
     var menu = JSON(xhr.responseText);
-    console.log(menu);
+    
   } else {
     alert("请求无响应" + xhr.status);
   }
