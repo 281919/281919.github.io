@@ -1,1 +1,23 @@
-家用电器
+{
+  "status": 1,
+  "reault": {
+    "totalmenu": 13,
+    "list": [
+      {
+        "menuId": "0",
+        "menuContent":[
+          {
+            "item0": "家用电器",
+            "item1": "小电器"
+          }
+        ],
+        "submenu":[
+          {
+            "subItem0": "电视",
+            "subItem1": "超薄电视"
+          }
+        ]
+      }
+    ]
+  }
+}
