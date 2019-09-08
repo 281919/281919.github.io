@@ -6,16 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>京东商城</title>
   <link rel="stylesheet" href="css/demo.css">
-  <script src="js/ajax.js"></script>
+
+  
 </head>
 <body>
   <div class="wrap" id="test">
-    <ul>
-      <li data-id="1">
-        <span>家用电器</span>
+    <ul v-for = "(item , index) in menuContent">
+      <li data-id="1" >
+        <span>{{item.item0}}</span>
       </li>
-      <li data-id="2">
-          <span>手机 </span> / <span>运营商</span> / <span>数码</span>
+      <li data-id="2" >
+          <span></span> / <span></span> / <span></span>
       </li>
       <li data-id="3">
         <span>电脑</span> / <span>办公</span>
@@ -537,7 +538,9 @@
 
 
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/vue.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/ajax.js"></script>
 
 </body>
 </html>
