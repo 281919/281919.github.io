@@ -1,11 +1,12 @@
 
 window.onload = function() {
   var xhr = new XMLHttpRequest();
-  xhr.open("get", "./data/menu.json", false);
-  xhr.send("list");
+  xhr.open("get", "./data/menu.text", false);
+  xhr.send();
 
   if(xhr.status >= 200 && xhr.status < 300 || xhr.status == 304){
-    alert(xhr.responseText);
+    var menu = JSON(xhr.responseText);
+    console.log(menu);
   } else {
     alert("请求无响应" + xhr.status);
   }
