@@ -1,7 +1,7 @@
 
 window.onload = function() {
   var xhr = new XMLHttpRequest();
-  xhr.open("get", "./data/menu.text", false);
+  xhr.open("get", "./data/menu.json", false);
   xhr.send("list");
 
   if(xhr.status >= 200 && xhr.status < 300 || xhr.status == 304){
