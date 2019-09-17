@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>饼状图</title>
+  <style>
+      #bzt {
+        width: 800px;
+        height: 800px; 
+        /* border: 1px solid black;  */
+      }
+    </style>
+  <script src="js/echarts.js"></script>
+</head>
+<body>
+  <div id="bzt"></div>
+  <script>
+    //柱状图所需属性
+    //echarts.init()初始化一个echarts实例,setOption()生成图形
+    //width根据x轴数据长短进行调整
+    //option对象,数据,title 对象 , 内有text属性 , 左上角标题
+    //legend 对象 , 内有data数组 , y轴数据 , 比如销量或价格
+    //xAxis 对象 , 内有data数组 , x轴数据 , 有多个
+    //series 数组 , 内有一个对象 , 对象内有name属性 , 和y轴数据相同 , type 指定图标类型 bar代表柱状图, data数组 x轴数据对应数值
+    var myChart = echarts.init(document.getElementById('bzt'));
+    myChart.setOption({
+      series: {
+                roseType: 'angle',
+                type: 'pie',
+                data: [
+                    {name: 'A', value: 1212},
+                    {name: 'B', value: 2323},
+                    {name: 'C', value: 1919}
+                ]
+            }
+    });
+    //饼状图所需属性
+    //对象 内有 series属性 ，series是一个对象，内有type属性,pie代表饼状图
+  </script>
+  
+</body>
+</html>

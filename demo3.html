@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>柱状图</title>
+ <script src="js/echarts.js"></script>
+ <script src="js/jquery.min.js"></script>
+</head>
+<style>
+  #main {
+    width: 1000px;
+    height: 400px; 
+    /* border: 1px solid black;  */
+  }
+</style>
+<body>
+
+  <div id="main" ></div>
+
+  <script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main') , "light");
+    var option = {
+      title: {
+        text: "EChart入门示例"
+      },
+      tooltip: {},
+      legend: {
+        data: "价格"
+      },
+      xAxis : {
+        data: [ ] 
+      },
+      yAxis : {},
+      series : [{
+        name : "价格",
+        type : "bar",
+        data : [ ] 
+      }]
+    };
+
+    $.get('data/data.json').done(function(data) {
+      myChart.setOption({
+        xAxis: {
+          data: data.categories
+        },
+        series: [{
+          name: '销量',
+          data: data.data
+        }]
+      })
+    })
+    
+    myChart.setOption(option);
+
+    //柱状图
+//     myChart.setOption({
+//     series : [
+//         {
+//             name: '访问来源',
+//             type: 'pie',
+//             radius: '55%',
+//             data:[
+//                 {value:235, name:'视频广告'},
+//                 {value:274, name:'联盟广告'},
+//                 {value:310, name:'邮件营销'},
+//                 {value:335, name:'直接访问'},
+//                 {value:400, name:'搜索引擎'}
+//             ]
+//         }
+//     ]
+// })
+
+</script>
+  
+</body>
+
+</html>
