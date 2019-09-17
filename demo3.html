@@ -30,9 +30,11 @@
         data: "价格"
       },
       xAxis : {
-        data: [ ] 
+         
       },
-      yAxis : {},
+      yAxis : {
+        data: [ ]
+      },
       series : [{
         name : "价格",
         type : "bar",
@@ -42,7 +44,7 @@
 
     $.get('data/data.json').done(function(data) {
       myChart.setOption({
-        xAxis: {
+        yAxis: {
           data: data.categories
         },
         series: [{
