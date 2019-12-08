@@ -6,7 +6,55 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>首页</title>
   <link rel="stylesheet" href="css/header.css">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <!-- 引入组件库 -->
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script src="js/ajax.js"></script>
+  <style>
+    input[type="button"]{
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-left: 5px;
+    }
+    .btn{
+        position: relative;
+        top: 20px;
+        left: 80px;
+
+    }
+    .result {
+        position: relative;
+        top: 65px;
+        left: -80px;
+    }
+    td{
+        width: 40px;
+        height: 30px;
+        border: 1px solid black;
+    }
+    .calculator{
+        position: relative;
+        width: 180px;
+        margin : 0 auto;
+
+    }
+    .calculator input{
+        width: 178px;
+        height: 30px;
+        border: 1px solid black;
+    }
+    table{
+        border: 1px solid black;
+    }
+    .calculator input[type="button"]{
+        width: 25px;
+        height: 25px;
+    }
+ 
+
+    </style>
 </head>
 <body>
   <div class="section">
@@ -18,7 +66,17 @@
 
     </div>
   </div>
+  <div id="calculator" class="calculator">
+    <table>
+      <thead><input type="text" name="res"></thead>
+        <tr><td><input type="button" value="1"></td>  <td><input type="button" value="2"></td>  <td><input type="button" value="3"></td>  <td><input type="button" value="+"></td></tr>
+        <tr><td><input type="button" value="4"></td>  <td><input type="button" value="5"></td>  <td><input type="button" value="6"></td>  <td><input type="button" value="-"></td></tr>
+        <tr><td><input type="button" value="7"></td>  <td><input type="button" value="8"></td>  <td><input type="button" value="9"></td>  <td><input type="button" value="*"></td></tr>
+        <tr><td><input type="button" value="0"></td>  <td><input type="button" value="."></td>  <td><input type="button" value="/"></td>  <td><input type="button" value="="></td></tr>
+    </table>
+  </div>
 
-
+<script src="js/calculator/base.js"></script>
+<script src="js/calculator/demo.js"></script>
 </body>
 </html>
